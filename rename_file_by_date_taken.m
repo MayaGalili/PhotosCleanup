@@ -5,18 +5,14 @@
 % @ Maya Galili. Dec 2018
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-function [] = rename_files_by_date_taken()
+function [] = rename_file_by_date_taken()
 dir_nn = uigetdir();
 dir_nn = [dir_nn '\'];
 file_type = '.jpg';
 files = dir([dir_nn '*' file_type]);
 
 % Loop through each
-for id = 1:length(files)
-    
-    % Get the file name (minus extension)
-    [~, f] = fileparts(files(id).name);
-    
+for id = 1:length(files) 
     %  rename
     old_file_path = [dir_nn files(id).name];
     
